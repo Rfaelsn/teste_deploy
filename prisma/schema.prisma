@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Aluno {
-  id             BigInt       @id @default(autoincrement())
+  id             BigInt    @id @default(autoincrement())
   name           String    @db.VarChar(63)
   cpf            String    @db.VarChar(127)
   matricula      String    @db.VarChar(127)
