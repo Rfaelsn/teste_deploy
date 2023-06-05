@@ -13,9 +13,9 @@ datasource db {
 model Aluno {
   id             BigInt    @id @default(autoincrement())
   name           String    @db.VarChar(63)
-  cpf            String    @db.VarChar(127)
-  matricula      String    @db.VarChar(127)
-  email          String    @db.VarChar(127)
+  cpf            String    @db.VarChar(127) @unique
+  matricula      String    @db.VarChar(127) @unique
+  email          String    @db.VarChar(127) @unique
   telefone       String    @db.VarChar(127)
   curso          String    @db.VarChar(127)
   password       String    @db.VarChar(127)
@@ -34,8 +34,8 @@ model Aluno {
 model FuncionarioDex {
   id        BigInt    @id @default(autoincrement())
   name      String    @db.VarChar(63)
-  cpf       String    @db.VarChar(127)
-  email     String    @db.VarChar(127)
+  cpf       String    @db.VarChar(127) @unique
+  email     String    @db.VarChar(127) @unique
   password  String    @db.VarChar(127)
   createdAt DateTime  @default(now()) @db.Timestamp(0)
   updatedAt DateTime  @default(now()) @db.Timestamp(0)
