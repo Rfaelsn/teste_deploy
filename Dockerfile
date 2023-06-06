@@ -6,7 +6,7 @@ WORKDIR /usr/estagio_legal_back
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm ci --production
+RUN npm i
 
 COPY . .
 
@@ -14,7 +14,7 @@ RUN npm run build
 
 RUN npx prisma generate
 
-RUN npx prisma migrate deploy
+RUN npx prisma migrate
 
 
 
