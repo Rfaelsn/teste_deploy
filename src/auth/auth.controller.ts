@@ -1,19 +1,6 @@
-import {
-  Body,
-  Controller,
-  HttpCode,
-  HttpStatus,
-  Post,
-  Req,
-  UseGuards,
-  Request,
-  Res,
-} from '@nestjs/common';
-import { AuthForgetDTO } from './dto/auth-forget.dto';
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { IsPublic } from './decorators/is-public.decorator';
-import { LocalAuthGuard } from './guards/local-auth.guard';
-import { AuthRequest } from './models/AuthRequest';
 
 @Controller('auth')
 export class AuthController {
